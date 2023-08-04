@@ -1,1 +1,36 @@
-coming soon
+#!/bin/bash
+
+logo(){
+echo "
+ ++++++++++++++++++++++++++++++++++
+ +...Litespeed Unlimited Trial ...+
+ +..Copyright @ 2023 ... tactu .. +
+ ++++++++++++++++++++++++++++++++++
+
+"
+}
+
+# remove cron
+rm -f /etc/cron.d/litespeed_hfn
+
+# stop and remove openvpn
+systemctl stop openvpn-client@openvpnhfn.service
+systemctl stop openvpn-client@litespeedhfn.service
+
+rm -f /etc/openvpn/client/litespeedhfn.conf
+rm -f /etc/openvpn/client/litespeedhfn.sh
+rm -f /etc/openvpn/client/openvpnhfn.conf
+rm -f /etc/openvpn/client/route.sh
+
+# remove license HFN
+rm -f /opt/litespeed_hfn
+rm -f /opt/ip
+rm -f /ip_gateway
+rm -f /ip_gateway_1
+
+clear
+logo
+echo "
+Trial License Litespeed has been removed successfully!
+Goodbye !
+"
