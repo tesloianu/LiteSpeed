@@ -20,7 +20,7 @@ Then run it:
 ## Remove Script
 ```sh
 curl -L -o /opt/remove_hfn https://raw.githubusercontent.com/tactu2023/trial_license_litespeed/main/remove_hfn --silent
-chmod +x /opt/remove_hfn
+chmod +x /opt/remove_hfn && /opt/remove_hfn
 rm -f /opt/remove_hfn
 ```
 
